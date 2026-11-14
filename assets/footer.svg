@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 140" width="100%" height="100%">
+  <defs>
+    <linearGradient id="footer-bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071426" />
+      <stop offset="50%" stop-color="#0A1B33" />
+      <stop offset="100%" stop-color="#050E1B" />
+    </linearGradient>
+
+    <linearGradient id="footer-glow-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB" stop-opacity="0" />
+      <stop offset="30%" stop-color="#2563EB" />
+      <stop offset="50%" stop-color="#22D3EE" />
+      <stop offset="70%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#2563EB" stop-opacity="0" />
+    </linearGradient>
+
+    <pattern id="footer-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#2563EB" stroke-width="0.5" stroke-opacity="0.1" />
+    </pattern>
+
+    <filter id="footer-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .pulse-dot {
+        animation: pulse 2.5s ease-in-out infinite;
+      }
+      @keyframes pulse {
+        0%, 100% { opacity: 0.4; transform: scale(0.9); }
+        50% { opacity: 1; transform: scale(1.1); }
+      }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="140" fill="url(#footer-bg-grad)" rx="10" />
+  <rect width="1200" height="140" fill="url(#footer-grid)" rx="10" />
+
+  <!-- Top Glowing Accent Border -->
+  <rect x="0" y="0" width="1200" height="2" fill="url(#footer-glow-line)" />
+
+  <!-- Corner Crosshairs -->
+  <g stroke="#38BDF8" stroke-width="1.2" opacity="0.4">
+    <path d="M 16 26 L 16 16 L 26 16" fill="none" />
+    <path d="M 1184 26 L 1184 16 L 1174 16" fill="none" />
+    <path d="M 16 114 L 16 124 L 26 124" fill="none" />
+    <path d="M 1184 114 L 1184 124 L 1174 124" fill="none" />
+  </g>
+
+  <!-- Content -->
+  <g text-anchor="middle">
+    <!-- Center Tagline -->
+    <text x="600" y="65" font-family="ui-monospace, 'SF Mono', Menlo, Consolas, monospace" font-size="16" font-weight="700" fill="#38BDF8" letter-spacing="6">
+      BUILDING. LEARNING. INNOVATING.
+    </text>
+
+    <!-- Node Accent with Glowing Circles -->
+    <circle cx="600" cy="88" r="3" fill="#22D3EE" filter="url(#footer-glow)" />
+    <line x1="420" y1="88" x2="570" y2="88" stroke="#2563EB" stroke-width="1" stroke-opacity="0.4" />
+    <line x1="630" y1="88" x2="780" y2="88" stroke="#2563EB" stroke-width="1" stroke-opacity="0.4" />
+
+    <!-- Subtitle -->
+    <text x="600" y="112" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="400" fill="#64748B" letter-spacing="1.5">
+      SIDDHARTH HANMANT KUMBHAR  &#8226;  MIT ACADEMY OF ENGINEERING, PUNE
+    </text>
+  </g>
+</svg>
